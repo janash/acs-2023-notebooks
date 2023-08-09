@@ -5,6 +5,7 @@ FROM mambaorg/micromamba
 COPY environment.yml* /tmp/conda-tmp/
 
 RUN micromamba install -f /tmp/conda-tmp/environment.yml
+
 #RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && conda install -y -c conda-forge mamba && /opt/conda/bin/mamba env update -n base -f /tmp/conda-tmp/environment.yml; fi \
 #    && echo "OK"
 
